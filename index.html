@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Store</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: black;
+            color: white;
+        }
+
+        header,
+        footer {
+            background-color: green;
+            color: white;
+            padding: 1px;
+        }
+
+        nav {
+            margin: 20px;
+        }
+
+        nav a {
+            margin: 10px;
+            text-decoration: none;
+            padding: 10px;
+            background-color: #008CBA;
+            color: white;
+            border-radius: 5px;
+        }
+        .links{
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            margin-top: 25px;
+            margin-right: 30px;
+        }
+        .links a{
+            background-color: orange;
+            padding: 8px;
+            margin-bottom: 3px;
+            margin: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        iframe {
+            width: 90%;
+            height: 500px;
+            border: 1px solid green;
+            margin-top: 5px;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Mobile Store</h1>
+        <div class="links">
+            <a href="login.html">Login</a>
+            <a href="register.html">Sign Up</a>
+        </div>
+    </header>
+
+    <nav>
+        <a href="iphone.html" target="mobileFrame">iPhone</a>
+        <a href="samsung.html" target="mobileFrame">Samsung</a>
+        <a href="pixel.html" target="mobileFrame">Pixel</a>
+    </nav>
+
+    <!-- Iframe where selected content loads -->
+    <iframe name="mobileFrame" srcdoc="
+        <html>
+        <head>
+            <style>
+                body { background-color: black; color: white; text-align: center; font-family: Arial, sans-serif; }
+                h2 { margin-top: 15%; }
+            </style>
+        </head>
+        <body>
+            <h2>Welcome to Mobile Store</h2>
+            <p>Select a brand from above</p>
+        </body>
+        </html>
+    "></iframe>
+
+    <footer>
+        <p>&copy; 2025 Mobile Store. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
